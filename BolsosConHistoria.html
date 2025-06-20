@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Moda Retro | Sagrado Corazón</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="bg-white text-black">
+
+    <!-- Header -->
+    <header class="bg-black py-8 mb-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold title-font text-white mb-2">Bolsos con historia</h1>
+            <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                Descubre nuestra colección de bolsos únicos, llenos de historia, color y técnicas artesanales.
+            </p>
+        </div>
+        <a href="index.html"
+        class="absolute top-6 right-8 px-6 py-2 bg-red-600 text-white rounded-md font-semibold shadow hover:bg-red-700 transition-all duration-300 z-10">
+        Inicio
+        </a>
+    </header>
+
+    <!-- Galería de productos -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Producto 1 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-xl card-hover flex flex-col">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e0?auto=format&fit=crop&w=900&q=80"
+                        alt="Camiseta Corazón Rebelde"
+                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold title-font mb-2">Camiseta "Corazón Rebelde"</h3>
+                    <p class="text-gray-600 mb-4 flex-1">Estampado único con técnica de serigrafía artesanal.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span class="text-xl font-bold text-red-600">$45.990</span>
+                        <button class="p-2 bg-black text-white rounded-full hover:bg-red-600 transition-colors duration-300" title="Añadir al carrito">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-xl card-hover flex flex-col">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1588710933940-9c1761348e3b?auto=format&fit=crop&w=987&q=80"
+                        alt="Chaqueta Retro Soul"
+                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold title-font mb-2">Chaqueta "Retro Soul"</h3>
+                    <p class="text-gray-600 mb-4 flex-1">Diseño vintage con detalles en hilo dorado.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span class="text-xl font-bold text-red-600">$120.990</span>
+                        <button class="p-2 bg-black text-white rounded-full hover:bg-red-600 transition-colors duration-300" title="Añadir al carrito">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-xl card-hover flex flex-col">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+                        alt="Falda Vintage"
+                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold title-font mb-2">Falda "Vintage Dreams"</h3>
+                    <p class="text-gray-600 mb-4 flex-1">Falda midi con estampado floral inspirado en los años 70.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span class="text-xl font-bold text-red-600">$59.990</span>
+                        <button class="p-2 bg-black text-white rounded-full hover:bg-red-600 transition-colors duration-300" title="Añadir al carrito">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Puedes agregar más productos aquí siguiendo el mismo formato -->
+        </div>
+    </main>
+
+    <!-- Botón volver arriba -->
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        class="fixed bottom-6 right-6 p-3 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 transition-all duration-300 z-50"
+        title="Volver al inicio">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+</body>
+</html>

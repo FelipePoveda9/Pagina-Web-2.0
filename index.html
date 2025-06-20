@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagrado Corazón - Moda con Historia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="carrito.js"></script>
+    <script src="whatsappBt.js"></script>
+    <script src="menuCelular.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-black">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black bg-opacity-90 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-white title-font text-2xl font-bold tracking-tight">Sagrado Corazón</span>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#home" class="text-white px-3 py-2 rounded-md text-sm font-medium draw-border">Inicio</a>
+                            <a href="#retro" class="text-white hover:text-red-300 px-3 py-2 rounded-md text-sm font-medium draw-border">Moda Retro</a>
+                            <a href="#pets" class="text-white hover:text-red-300 px-3 py-2 rounded-md text-sm font-medium draw-border">Mascotas</a>
+                            <a href="#bags" class="text-white hover:text-red-300 px-3 py-2 rounded-md text-sm font-medium draw-border">Bolsos</a>
+                            <a href="#story" class="text-white hover:text-red-300 px-3 py-2 rounded-md text-sm font-medium draw-border">Nuestra Historia</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-4 flex items-center md:ml-6">
+                        <button class="relative p-1 rounded-full text-white hover:text-red-300 focus:outline-none">
+                            <span class="sr-only">View cart</span>
+                            <i class="fas fa-shopping-cart text-xl"></i>
+                            <span id="cart-badge" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-2 py-0.5 font-bold hidden">0</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="bg-black inline-flex items-center justify-center p-2 rounded-md text-white hover:text-red-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="hidden md:hidden bg-black" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-white block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
+                <a href="#retro" class="text-white hover:text-red-300 block px-3 py-2 rounded-md text-base font-medium">Moda Retro</a>
+                <a href="#pets" class="text-white hover:text-red-300 block px-3 py-2 rounded-md text-base font-medium">Mascotas</a>
+                <a href="#bags" class="text-white hover:text-red-300 block px-3 py-2 rounded-md text-base font-medium">Bolsos</a>
+                <a href="#story" class="text-white hover:text-red-300 block px-3 py-2 rounded-md text-base font-medium">Nuestra Historia</a>
+                <a href="carrito.html" class="text-white hover:text-red-300 block px-3 py-2 rounded-md text-base font-medium"></a>
+                    <i class="fas fa-shopping-cart mr-2"></i> Carrito
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex items-center justify-center text-center fade-in">
+        <div class="px-4 py-16 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight title-font text-white mb-6">
+                    Sagrado Corazón
+                </h1>
+                <p class="mt-6 text-xl md:text-2xl text-white max-w-3xl mx-auto">
+                    Donde el dolor se transforma en arte, y el arte en moda con propósito.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#products" class="px-8 py-3 text-lg font-semibold rounded bg-red-600 text-white hover:bg-red-700 transition-all duration-300 transform hover:scale-105 heartbeat">
+                        Ver Colección
+                    </a>
+                    <a href="#story" class="px-8 py-3 text-lg font-semibold rounded border-2 border-gold-500 text-white hover:bg-gold-500 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
+                        Conoce Nuestra Historia
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scrolling indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+            <a href="#products" class="animate-bounce inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-full text-white bg-red-600 hover:bg-red-700">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section id="products" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold title-font text-black mb-4">
+                    Artesanía Transformadora
+                </h2>
+                <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Cada pieza es una declaración, cada estampado una historia de resiliencia y empoderamiento.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Retro Fashion -->
+                <div id="retro" class="bg-white rounded-lg overflow-hidden shadow-xl card-hover">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" 
+                             alt="Moda Retro" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold text-white title-font">Moda Retro</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-6">
+                            Estampados únicos que combinan nostalgia y modernidad, creados con técnicas artesanales.
+                        </p>
+                        <a href="ModaRetro.html" class="inline-flex items-center px-6 py-2 border border-red-600 text-red-600 font-medium rounded-md hover:bg-red-600 hover:text-white transition-all duration-300">
+                            Ver Colección
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Pets Fashion -->
+                <div id="pets" class="bg-white rounded-lg overflow-hidden shadow-xl card-hover">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" 
+                             alt="Mascotas con Estilo" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold text-white title-font">Mascotas con Estilo</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-6">
+                            Diseños exclusivos para tus compañeros animales, con la misma pasión y dedicación que ponemos en toda nuestra moda.
+                        </p>
+                        <a href="MascotasconEstilo.html" class="inline-flex items-center px-6 py-2 border border-red-600 text-red-600 font-medium rounded-md hover:bg-red-600 hover:text-white transition-all duration-300">
+                            Ver Colección
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Bags -->
+                <div id="bags" class="bg-white rounded-lg overflow-hidden shadow-xl card-hover">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600081726535-a69b0f968ee8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80" 
+                             alt="Bolsos con Historia" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold text-white title-font">Bolsos con Historia</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-6">
+                            Piezas únicas, cada bolso cuenta una historia de transformación y lleva consigo el espíritu de quien lo creó.
+                        </p>
+                        <a href="BolsosConHistoria.html" class="inline-flex items-center px-6 py-2 border border-red-600 text-red-600 font-medium rounded-md hover:bg-red-600 hover:text-white transition-all duration-300">
+                            Ver Colección
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold title-font text-black mb-4">
+                    Piezas Destacadas
+                </h2>
+                <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Nuestras creaciones más emblemáticas, llenas de significado y estilo.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover group">
+                    <div class="relative overflow-hidden mb-4 rounded-lg h-64">
+                        <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80" 
+                             alt="Camiseta Retro" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute top-0 right-0 bg-red-600 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">
+                            NUEVO
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Camiseta "Corazón Rebelde"</h3>
+                    <p class="text-gray-600 text-sm mb-4">Estampado único con técnica de serigrafía artesanal</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-red-600">$45.990</span>
+                    <button 
+                        class="add-to-cart p-2 bg-black text-white rounded-full hover:bg-red-600 transition-colors duration-300"
+                        data-product='{
+                            "id": "camiseta-corazon-rebelde",
+                            "name": "Camiseta Corazón Rebelde",
+                            "price": 500,
+                            "image": "https://images.unsplash.com/photo-1539533018447-63fcce2678e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80",
+                            "size": "M"
+                        }'
+                        title="Añadir al carrito">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover group">
+                    <div class="relative overflow-hidden mb-4 rounded-lg h-64">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80" 
+                             alt="Bolso Artesanal" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Bolso "Renacer"</h3>
+                    <p class="text-gray-600 text-sm mb-4">Hecho a mano con materiales reciclados</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-red-600">$1.145.990</span>
+                    <button 
+                        class="add-to-cart p-2 bg-black text-white rounded-full hover:bg-red-600 transition-colors duration-300"
+                        data-product='{
+                            "id": "bolso-renacer",
+                            "name": "Bolso Renacer",
+                            "price": 1145990,
+                            "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80",
+                            "size": "M"
+                        }'
+                        title="Añadir al carrito">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>                        
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover group">
+                    <div class="relative overflow-hidden mb-4 rounded-lg h-64">
+                        <img src="https://images.unsplash.com/photo-1588710933940-9c1761348e3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" 
+                             alt="Chaqueta retro" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute top-0 right-0 bg-amber-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">
+                            MÁS VENDIDO
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Chaqueta "Retro Soul"</h3>
+                    <p class="text-gray-600 text-sm mb-4">Diseño vintage con detalles en hilo dorado</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-red-600">$2.045.990</span>
+                    <button 
+                        class="add-to-cart p-2 bg-black text-white rounded-full hover:bg-red-600 transition-colors duration-300"
+                        data-product='{
+                            "id": "chaqueta-retoro-soul",
+                            "name": "Chaqueta Retro Soul",
+                            "price": 2045990,
+                            "image": "https://images.unsplash.com/photo-1588710933940-9c1761348e3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+                            "size": "M"
+                        }'
+                        title="Añadir al carrito">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>           
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover group">
+                    <div class="relative overflow-hidden mb-4 rounded-lg h-64">
+                        <img src="https://images.unsplash.com/photo-1586669522475-89347b69436f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80" 
+                             alt="Overol para perro" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Overol "Peludo Feliz"</h3>
+                    <p class="text-gray-600 text-sm mb-4">Para mascotas con estilo y personalidad</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-red-600">$645.990</span>
+                    <button 
+                        class="add-to-cart p-2 bg-black text-white rounded-full hover:bg-red-600 transition-colors duration-300"
+                        data-product='{
+                            "id": "overol-peludo-feliz",
+                            "name": "Overol Peludo Feliz",
+                            "price": 645990,
+                            "image": "https://images.unsplash.com/photo-1586669522475-89347b69436f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80",
+                            "size": "M"
+                        }'
+                        title="Añadir al carrito">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>    
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-black hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
+                    Ver Todo el Catálogo
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section id="story" class="py-16 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="mb-10 lg:mb-0">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Nuestra historia" 
+                         class="rounded-lg shadow-2xl floating">
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold title-font mb-6 text-white">
+                        Una Historia de Resiliencia
+                    </h2>
+                    <div class="w-24 h-1 bg-red-600 mb-6"></div>
+                    <p class="text-lg mb-6">
+                        Sagrado Corazón nació en la cocina de una casa donde cinco mujeres encontraron refugio y apoyo mutuo. Lo que comenzó como una terapia para sanar heridas emocionales, se convirtió en un movimiento de empoderamiento a través del diseño.
+                    </p>
+                    <p class="text-lg mb-6">
+                        Cada estampado, cada costura, lleva consigo la historia de superación de estas mamás que transformaron su dolor en arte. Desde 2018, hemos crecido sin perder nuestra esencia: moda con propósito.
+                    </p>
+                    <p class="text-lg mb-8">
+                        Hoy, nuestra comunidad sigue creciendo, apoyando a más mujeres a encontrar su voz a través de la creatividad y el emprendimiento.
+                    </p>
+                    <a href="#" class="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md shadow-sm text-white hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105">
+                        Conoce Más
+                        <i class="fas fa-heart ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                <div class="bg-black p-6 rounded-lg border border-gray-800">
+                    <div class="text-4xl font-bold text-red-600 mb-2">5</div>
+                    <div class="text-sm text-gray-300">Mujeres Fundadoras</div>
+                </div>
+                <div class="bg-black p-6 rounded-lg border border-gray-800">
+                    <div class="text-4xl font-bold text-red-600 mb-2">1.2K</div>
+                    <div class="text-sm text-gray-300">Clientes Satisfechos</div>
+                </div>
+                <div class="bg-black p-6 rounded-lg border border-gray-800">
+                    <div class="text-4xl font-bold text-red-600 mb-2">15</div>
+                    <div class="text-sm text-gray-300">Diseñadoras Capacitadas</div>
+                </div>
+                <div class="bg-black p-6 rounded-lg border border-gray-800">
+                    <div class="text-4xl font-bold text-red-600 mb-2">1.5K</div>
+                    <div class="text-sm text-gray-300">Piezas Vendidas</div>
+                </div>
+                <div class="bg-black p-6 rounded-lg border border-gray-800">
+                    <div class="text-4xl font-bold text-red-600 mb-2">100%</div>
+                    <div class="text-sm text-gray-300">Hecho con Amor</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-red-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold title-font mb-6">
+                Únete a Nuestra Comunidad
+            </h2>
+            <div class="w-24 h-1 bg-white mx-auto mb-6"></div>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                Suscríbete para recibir novedades, historias inspiradoras y descuentos exclusivos en nuestras colecciones.
+            </p>
+            
+            <form class="mt-8 sm:flex sm:max-w-md mx-auto">
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" id="email" name="email" required 
+                       class="w-full px-5 py-3 placeholder-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-offset-red-700 focus:ring-white focus:outline-none rounded-md text-black" 
+                       placeholder="Ingresa tu email">
+                <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                    <button type="submit" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-black hover:text-white transition-colors duration-300">
+                        Suscribirse
+                    </button>
+                </div>
+            </form>
+            
+            <div class="mt-8 flex justify-center space-x-6">
+                <a href="#" class="text-white hover:text-black">
+                    <span class="sr-only">Facebook</span>
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-black">
+                    <span class="sr-only">Instagram</span>
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="text-white hover:text-black">
+                    <span class="sr-only">Twitter</span>
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 title-font">Sagrado Corazón</h3>
+                    <p class="text-sm text-gray-400">
+                        Transformando vidas a través de la moda artesanal desde 2018.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 title-font">Categorías</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#retro" class="hover:text-white transition-colors duration-300">Moda Retro</a></li>
+                        <li><a href="#pets" class="hover:text-white transition-colors duration-300">Mascotas</a></li>
+                        <li><a href="#bags" class="hover:text-white transition-colors duration-300">Bolsos</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Novedades</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 title-font">Empresa</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#story" class="hover:text-white transition-colors duration-300">Nuestra Historia</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Impacto Social</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 title-font">Legal</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Términos</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Privacidad</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Envíos</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Devoluciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400 mb-4 md:mb-0">
+                    &copy; 2023 Sagrado Corazón. Todos los derechos reservados.
+                </p>
+                <div class="flex space-x-6">
+                    <img src="https://via.placeholder.com/40x25" alt="Payment method" class="h-6">
+                    <img src="https://via.placeholder.com/40x25" alt="Payment method" class="h-6">
+                    <img src="https://via.placeholder.com/40x25" alt="Payment method" class="h-6">
+                    <img src="https://via.placeholder.com/40x25" alt="Payment method" class="h-6">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="hidden fixed bottom-6 right-6 p-3 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <a href="carrito.html" id="nequi-pay-btn"
+        class="fixed bottom-24 right-6 p-3 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 transition-all duration-300 z-50 flex items-center gap-2"
+        style="display:none;">
+        <i class="fas fa-money-bill-wave"></i> Pagar con Nequi
+    </a>
+
+    <!-- Floating Whatsapp button -->
+    <a href="https://wa.me/+573222352867?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Sagrado%20Coraz%C3%B3n%20y%20sus%20productos." 
+       target="_blank" 
+       id="whatsapp-btn"
+       class="fixed bottom-6 left-6 p-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 pulse">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+        <div id="nequi-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-lg w-full relative">
+        <button onclick="document.getElementById('nequi-modal').classList.add('hidden')" class="absolute top-2 right-2 text-gray-400 hover:text-red-600 text-2xl">&times;</button>
+        <h2 class="text-2xl font-bold mb-4 text-black title-font">Pago por Nequi</h2>
+        <div class="mb-4">
+        <p class="mb-2">Total a pagar: <span id="nequi-total" class="font-bold text-red-600"></span></p>
+        <p class="mb-2">Envía el monto exacto a <span class="font-bold text-black">+57 3222352867</span> por Nequi.</p>
+        <p class="mb-2">Luego, ingresa el número de confirmación/código de transacción y adjunta la captura de pantalla.</p>
+        </div>
+        <form id="nequi-form" enctype="multipart/form-data" class="space-y-4">
+        <input type="text" name="nombre" placeholder="Nombre completo" required class="w-full px-4 py-2 rounded border">
+        <input type="text" name="direccion" placeholder="Dirección de envío" required class="w-full px-4 py-2 rounded border">
+        <input type="text" name="telefono" placeholder="Teléfono de contacto" required class="w-full px-4 py-2 rounded border">
+        <input type="text" name="notas" placeholder="Notas adicionales (opcional)" class="w-full px-4 py-2 rounded border">
+        <input type="text" name="codigo" placeholder="Código de transacción Nequi" required class="w-full px-4 py-2 rounded border">
+        <input type="file" name="captura" accept="image/*" required class="w-full">
+        <button type="submit" class="w-full px-6 py-3 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 transition-all duration-300">Confirmar Pedido</button>
+        </form>
+        <div id="nequi-msg" class="mt-4 text-center"></div>
+    </div>
+</div>
+</body>
+</html>

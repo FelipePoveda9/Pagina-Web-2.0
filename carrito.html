@@ -1,0 +1,69 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Moda Retro | Sagrado Corazón</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="estilos.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <script src="carrito.js"></script>
+    </head>
+    <body class="bg-white text-black">
+        <section id="cart" class="py-16 bg-black text-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold title-font mb-8 text-center">
+                    Tu Carrito de Compras
+                </h2>
+                <a href="index.html"
+                    class="absolute top-6 right-8 px-6 py-2 bg-red-600 text-white rounded-md font-semibold shadow hover:bg-red-700 transition-all duration-300 z-10">
+                    Inicio
+                </a>
+                <div class="w-24 h-1 bg-red-600 mx-auto mb-8"></div>
+                <!-- Cart Items dinámico -->
+                <div id="cart-items" class="space-y-6"></div>
+
+                <!-- Cart Summary dinámico -->
+                <div id="cart-summary" class="mt-10 bg-gray-900 rounded-lg p-6 shadow" style="display:none;">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-lg font-semibold">Subtotal</span>
+                        <span id="cart-subtotal" class="text-lg font-bold text-red-500">$0</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-lg font-semibold">Envío</span>
+                        <span id="cart-envio" class="text-lg font-bold text-red-500">$0</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xl font-bold">Total</span>
+                        <span id="cart-total" class="text-2xl font-bold text-red-500">$0</span>
+                    </div>
+                    <button id="checkout-btn" class="w-full px-6 py-3 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="fas fa-credit-card"></i> Finalizar Compra
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div id="nequi-modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+            <div class="bg-gray-900 rounded-lg p-8 max-w-lg w-full relative border-2 border-red-600 shadow-lg">
+                <button onclick="document.getElementById('nequi-modal').classList.add('hidden')" class="absolute top-2 right-2 text-gray-400 hover:text-red-600 text-2xl">&times;</button>
+                <h2 class="text-2xl font-bold mb-4 text-white title-font">Pago por Nequi</h2>
+                <div class="mb-4 text-gray-200">
+                    <p class="mb-2">Total a pagar: <span id="nequi-total" class="font-bold text-red-500"></span></p>
+                    <p class="mb-2">Envía el monto exacto a <span class="font-bold text-white">+57 3222352867</span> por Nequi.</p>
+                    <p class="mb-2">Luego, ingresa el número de confirmación/código de transacción y adjunta la captura de pantalla.</p>
+                </div>
+                <form id="nequi-form" enctype="multipart/form-data" class="space-y-4">
+                    <input type="text" name="nombre" placeholder="Nombre completo" required class="w-full px-4 py-2 rounded border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:border-red-500 focus:outline-none">
+                    <input type="text" name="direccion" placeholder="Dirección de envío" required class="w-full px-4 py-2 rounded border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:border-red-500 focus:outline-none">
+                    <input type="text" name="telefono" placeholder="Teléfono de contacto" required class="w-full px-4 py-2 rounded border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:border-red-500 focus:outline-none">
+                    <input type="text" name="notas" placeholder="Notas adicionales (opcional)" class="w-full px-4 py-2 rounded border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:border-red-500 focus:outline-none">
+                    <input type="text" name="codigo" placeholder="Código de transacción Nequi" required class="w-full px-4 py-2 rounded border border-gray-700 bg-gray-800 text-white placeholder-gray-400 focus:border-red-500 focus:outline-none">
+                    <input type="file" name="captura" accept="image/*" required class="w-full text-white">
+                    <button type="submit" class="w-full px-6 py-3 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 transition-all duration-300">Confirmar Pedido</button>
+                </form>
+                <div id="nequi-msg" class="mt-4 text-center"></div>
+            </div>
+        </div>
+    </body>
+    </html>
